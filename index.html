@@ -237,23 +237,23 @@ body{
     margin-bottom:20px !important;
   }
 
-  /* MANIFIESTO - reducir texto más agresivamente para ajuste perfecto */
+  /* MANIFIESTO - reducir texto más agresivamente para ajuste perfecto SIN scrollbar */
   #manifiesto .hero-lead{
-    font-size:1.15rem !important;  /* reducido de 1.3rem */
-    line-height:1.28 !important;    /* más compacto */
+    font-size:0.95rem !important;  /* reducido aún más */
+    line-height:1.22 !important;    /* más compacto */
     margin-bottom:0 !important;
   }
   .manifesto-inner p{
-    font-size:0.88rem !important;  /* reducido de 0.95rem */
-    line-height:1.4 !important;     /* más compacto de 1.5 */
-    margin-bottom:0.45rem !important; /* reducido de 0.6rem */
+    font-size:0.76rem !important;  /* reducido aún más */
+    line-height:1.3 !important;     /* más compacto */
+    margin-bottom:0.28rem !important; /* reducido más */
   }
   .manifesto-inner p:last-child{
     margin-bottom:0 !important;
   }
   .manifesto-logo img{
-    width:60px !important;          /* reducido de 70px */
-    margin-bottom:18px !important;    /* reducido de 24px */
+    width:50px !important;          /* reducido más */
+    margin-bottom:12px !important;    /* reducido más */
   }
 
   /* TÍTULOS DE SECCIÓN - reducir */
@@ -364,12 +364,17 @@ body{
     text-align:center !important;
   }
   
-  /* Manifiesto: ancho ligeramente más pequeño para mejor ajuste */
+  /* Manifiesto: ancho ligeramente más pequeño para mejor ajuste SIN scrollbar */
   #manifiesto .manifesto-inner{
     max-width:400px !important;  /* más pequeño que otras secciones */
     width:100% !important;
     margin:0 !important;
     text-align:center !important;
+  }
+  
+  /* Asegurar que el texto del manifiesto quepa sin scrollbar */
+  #manifiesto .manifesto-primal{
+    overflow:hidden !important;
   }
 
   #about-us .primal-speakers-wrapper{
@@ -380,8 +385,8 @@ body{
 
   /* === Ajuste real: MANIFIESTO y LO QUE HACEMOS sin "aire arriba" === */
   #manifiesto .manifesto-primal{
-    padding-top:50px !important;     /* reducido más para manifiesto */
-    padding-bottom:50px !important;
+    padding-top:30px !important;     /* reducido más */
+    padding-bottom:30px !important;   /* menos padding abajo */
     align-items:center !important;
   }
   #loquehacemos .hero-primal{
@@ -825,9 +830,10 @@ body{
     display:flex !important;
     align-items:center !important;
     justify-content:center !important;
-    padding:0 32px !important;
+    padding:0 24px !important;
     box-sizing:border-box !important;
     text-align:center !important;
+    overflow:hidden !important;
   }
 
   /* inner wrappers */
@@ -839,9 +845,11 @@ body{
   #faqs .primal-faq-inner,
   #cierre .primal-closing-inner{
     width:100% !important;
-    max-width:540px !important;
+    max-width:100% !important;
     margin:0 auto !important;
     text-align:center !important;
+    box-sizing:border-box !important;
+    padding:0 8px !important;
   }
 
   /* ===== COUNTDOWN: achicar 20% SOLO en mobile ===== */
@@ -920,17 +928,252 @@ body{
   #about-us .primal-speakers-section,
   #faqs .primal-faq-section{
     align-items:flex-start !important;
-    justify-content:flex-start !important;
+    justify-content:center !important;
   }
 
-  /* Safe top interno */
-  #manifiesto .manifesto-primal,
-  #loquehacemos .hero-primal,
-  #fechas-ubicacion-cupos .primal-info-section,
-  #about-us .primal-speakers-section,
+  /* Safe top interno - ajustado para mejor visualización */
+  #manifiesto .manifesto-primal{
+    padding-top:140px !important;
+    padding-bottom:100px !important;
+  }
+  #loquehacemos .hero-primal{
+    padding-top:140px !important;
+    padding-bottom:100px !important;
+  }
+  #fechas-ubicacion-cupos .primal-info-section{
+    padding-top:140px !important;
+    padding-bottom:100px !important;
+  }
+  #about-us .primal-speakers-section{
+    padding-top:140px !important;
+    padding-bottom:100px !important;
+  }
   #faqs .primal-faq-section{
-    padding-top:150px !important;
-    padding-bottom:120px !important;
+    padding-top:140px !important;
+    padding-bottom:100px !important;
+  }
+
+  /* MOBILE: MANIFIESTO - ajustes específicos para mobile */
+  #manifiesto .hero-lead{
+    font-size:1.0rem !important;
+    line-height:1.3 !important;
+    margin-bottom:0 !important;
+  }
+  #manifiesto .manifesto-inner p{
+    font-size:0.85rem !important;
+    line-height:1.4 !important;
+    margin-bottom:0.4rem !important;
+  }
+  #manifiesto .manifesto-logo img{
+    width:60px !important;
+    margin-bottom:16px !important;
+  }
+  #manifiesto .manifesto-inner{
+    max-width:100% !important;
+    padding:0 8px !important;
+  }
+
+  /* MOBILE: HERO - ajustes responsivos */
+  #s-home .hero-lead{
+    font-size:1.2rem !important;
+    line-height:1.25 !important;
+  }
+  #s-home .hero-tags{
+    font-size:0.72rem !important;
+  }
+  #s-home .hero-logo img{
+    width:140px !important;
+    max-width:50vw !important;
+  }
+
+  /* =========================================================
+     MOBILE: BLOQUE 3 - LO QUE HACEMOS (100% RESPONSIVE)
+  ========================================================= */
+  #loquehacemos .hero-primal{
+    padding-left:20px !important;
+    padding-right:20px !important;
+    width:100% !important;
+    max-width:100% !important;
+  }
+  #loquehacemos .hero-inner{
+    width:100% !important;
+    max-width:100% !important;
+    padding:0 !important;
+    margin:0 !important;
+  }
+  #loquehacemos .hero-logo2{
+    width:100% !important;
+    margin-bottom:20px !important;
+  }
+  #loquehacemos .hero-logo2 h3{
+    font-size:1.4rem !important;
+    line-height:1.1 !important;
+    margin-bottom:8px !important;
+    word-wrap:break-word !important;
+  }
+  #loquehacemos p{
+    font-size:0.85rem !important;
+    line-height:1.35 !important;
+    width:100% !important;
+    word-wrap:break-word !important;
+    margin:0 !important;
+  }
+  #loquehacemos p .accent{
+    font-size:0.95rem !important;
+    margin-top:8px !important;
+    margin-bottom:4px !important;
+    line-height:1.2 !important;
+    word-wrap:break-word !important;
+  }
+
+  /* =========================================================
+     MOBILE: BLOQUE 4 - FECHAS/UBICACIÓN/CUPOS (100% RESPONSIVE)
+  ========================================================= */
+  #fechas-ubicacion-cupos .primal-info-section{
+    padding-left:20px !important;
+    padding-right:20px !important;
+    width:100% !important;
+    max-width:100% !important;
+  }
+  #fechas-ubicacion-cupos .primal-info-inner{
+    width:100% !important;
+    max-width:100% !important;
+    padding:0 !important;
+    margin:0 !important;
+  }
+  .primal-info-item{
+    width:100% !important;
+    margin-bottom:28px !important;
+    padding:0 !important;
+  }
+  .primal-info-icon{
+    margin-bottom:12px !important;
+    width:100% !important;
+    display:flex !important;
+    justify-content:center !important;
+  }
+  .primal-info-icon img{
+    width:40px !important;
+    height:auto !important;
+  }
+  .primal-info-title{
+    font-size:0.95rem !important;
+    line-height:1.2 !important;
+    margin:0 0 4px !important;
+    word-wrap:break-word !important;
+    text-align:center !important;
+    width:100% !important;
+  }
+  .primal-info-subtitle{
+    font-size:0.82rem !important;
+    line-height:1.4 !important;
+    margin:0 !important;
+    word-wrap:break-word !important;
+    text-align:center !important;
+    width:100% !important;
+  }
+  .primal-info-subtitle.cupos{
+    line-height:1.45 !important;
+  }
+  #fechas-ubicacion-cupos .primal-info-section .btn-whatsapp-primal{
+    width:100% !important;
+    max-width:100% !important;
+    margin-top:16px !important;
+    padding:0.7rem 1.2rem !important;
+    font-size:0.72rem !important;
+    box-sizing:border-box !important;
+  }
+
+  /* =========================================================
+     MOBILE: BLOQUE 5 - FACILITADORES/ABOUT US (100% RESPONSIVE)
+  ========================================================= */
+  #about-us .primal-speakers-section{
+    padding-left:20px !important;
+    padding-right:20px !important;
+    width:100% !important;
+    max-width:100% !important;
+  }
+  #about-us .primal-speakers-wrapper{
+    width:100% !important;
+    max-width:100% !important;
+    padding:0 !important;
+    margin:0 !important;
+  }
+  .primal-speakers-list{
+    width:100% !important;
+    margin-top:16px !important;
+  }
+  .primal-speaker{
+    width:100% !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    gap:14px !important;
+    margin-bottom:0 !important;
+  }
+  .primal-speaker + .primal-speaker{
+    margin-top:28px !important;
+  }
+  .primal-speaker-media{
+    width:100% !important;
+    justify-content:center !important;
+    display:flex !important;
+  }
+  .primal-speaker-photo{
+    width:90px !important;
+    height:90px !important;
+    flex-shrink:0 !important;
+  }
+  #about-us .primal-speaker-info{
+    width:100% !important;
+    text-align:center !important;
+    padding:0 !important;
+  }
+  #about-us .primal-speaker-info h3{
+    font-size:0.95rem !important;
+    line-height:1.2 !important;
+    margin:0 0 6px !important;
+    word-wrap:break-word !important;
+    text-align:center !important;
+    width:100% !important;
+  }
+  #about-us .primal-speaker-info p{
+    font-size:0.82rem !important;
+    line-height:1.4 !important;
+    margin:0 !important;
+    word-wrap:break-word !important;
+    text-align:center !important;
+    width:100% !important;
+  }
+  .primal-speaker-divider{
+    width:100% !important;
+    margin:20px 0 24px !important;
+    max-width:200px !important;
+  }
+
+  /* MOBILE: FAQ - ajustes responsivos */
+  #faqs .primal-faq-question{
+    font-size:1.0rem !important;
+    margin:10px 0 3px !important;
+  }
+  #faqs .primal-faq-answer{
+    font-size:0.88rem !important;
+    line-height:1.3 !important;
+  }
+
+  /* MOBILE: CIERRE - ajustes responsivos */
+  .primal-closing-title{
+    font-size:0.95rem !important;
+  }
+  .primal-closing-text{
+    font-size:0.88rem !important;
+    line-height:1.5 !important;
+  }
+  .primal-closing-highlight{
+    font-size:0.9rem !important;
+  }
+  .btn-whatsapp-primal{
+    padding:0.75rem 1.4rem !important;
+    font-size:0.75rem !important;
   }
 
   /* CIERRE: logo más chico */
