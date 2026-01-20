@@ -1,0 +1,1186 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <title>Primal</title>
+
+    <meta name="description" content="Primal. Entrenamiento físico, mental y energético en la Patagonia salvaje.">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <!-- Theme + Template CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/pageloader.css">
+    <link rel="stylesheet" href="./fonts/opensans/stylesheet.css">
+    <link rel="stylesheet" href="./fonts/asap/stylesheet.css">
+    <link rel="stylesheet" href="./css/ionicons.min.css">
+    <link rel="stylesheet" href="./css/foundation.min.css">
+    <link rel="stylesheet" href="./js/vendor/jquery.fullPage.css">
+    <link rel="stylesheet" href="./js/vegas/vegas.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main_responsive.css">
+    <link rel="stylesheet" href="./css/style-color1.css">
+
+    <!-- ==========================
+         PRIMAL – estilos inline
+    ========================== -->
+   <style>
+/* =========================================================
+   PRIMAL – STYLE LIMPIO (sin @media anidados)
+   Incluye:
+   - Logo fijo + footer fijo
+   - Ocultar/mostrar en MOBILE por sección (hero/manifiesto/cierre)
+   - Nav dots mobile a la izquierda centrados
+   - Fondo: mostrar más cielo
+   - Alineación + tipografías coherentes
+========================================================= */
+
+/* Fuente PRIMAL */
+@font-face{
+  font-family:"Neue Montreal";
+  src:url("./fonts/NeueMontreal-Regular.otf") format("opentype");
+  font-weight:300;
+  font-style:normal;
+  font-display:swap;
+}
+
+:root{
+  --primal-negro:#1c1c1c;
+  --primal-crudo:#e9e3d2;
+  --primal-oliva:#656e53;
+  --primal-naranja:#ed794e;
+
+  --primal-text-light:var(--primal-crudo);
+  --primal-text-dark:var(--primal-negro);
+}
+
+body{
+  font-family:"Neue Montreal","Open Sans",sans-serif;
+  font-synthesis:none;
+  color:var(--primal-crudo);
+  background-color:#000;
+}
+
+/* filtro oscuro sobre la foto */
+.page-cover .cover-bg-mask{
+  background-color:rgba(0,0,0,0.55) !important;
+}
+
+/* reset template padding lateral */
+.page-home.page-cent .content{
+  padding-left:0 !important;
+  padding-right:0 !important;
+}
+#s-when .clock.clock-countdown .digit .txt{
+  display: inline-block;
+  transform: translateX(24px);
+}
+/* =========================================================
+   LOGO FIJO ARRIBA IZQUIERDA (TODA LA WEB)
+========================================================= */
+.primal-fixed-logo{
+  position:fixed;
+  top:24px;
+  left:24px;
+  z-index:9999;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  pointer-events:auto;
+}
+.primal-fixed-logo img{
+  width:160px;
+  max-width:45vw;
+  height:auto;
+  display:block;
+  opacity:0.95;
+}
+
+/* =========================================================
+   FOOTER FIJO (TODA LA WEB)
+   IZQ: CUERPO/MENTE  |  DER: ENERGÍA/PRESENCIA
+========================================================= */
+.primal-fixed-footer{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:18px;
+  z-index:9998;
+  pointer-events:none;
+}
+.primal-fixed-footer .primal-fixed-footer-inner{
+  width:100%;
+  padding:0 28px;
+  box-sizing:border-box;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+}
+.primal-fixed-footer .primal-fixed-footer-left,
+.primal-fixed-footer .primal-fixed-footer-right{
+  font-family:"Neue Montreal","Open Sans",sans-serif;
+  font-size:0.80rem;
+  font-weight:500;
+  letter-spacing:0.20em;
+  text-transform:uppercase;
+  line-height:1.15;
+  color:var(--primal-crudo);
+  text-shadow:0 6px 18px rgba(0,0,0,0.55);
+}
+.primal-fixed-footer .primal-fixed-footer-right{
+  text-align:right;
+}
+
+/* =========================================================
+   SISTEMA DE ALINEACIÓN (DESKTOP)
+========================================================= */
+@media (min-width:769px){
+
+  #s-home .hero-primal,
+  #manifiesto .manifesto-primal,
+  #loquehacemos .hero-primal,
+  #fechas-ubicacion-cupos .primal-info-section,
+  #about-us .primal-speakers-section,
+  #faqs .primal-faq-section,
+  #cierre .primal-closing-section{
+    width:100% !important;
+    max-width:1100px !important;
+    margin:0 auto !important;
+    min-height:100vh !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    padding:0 6vw !important;
+    box-sizing:border-box !important;
+    text-align:center !important;
+  }
+
+  #s-home .hero-inner,
+  #manifiesto .manifesto-inner,
+  #loquehacemos .hero-inner,
+  #fechas-ubicacion-cupos .primal-info-inner,
+  #faqs .primal-faq-inner,
+  #cierre .primal-closing-inner{
+    max-width:460px !important;
+    width:100% !important;
+    margin:0 !important;
+    text-align:center !important;
+  }
+
+  #about-us .primal-speakers-wrapper{
+    max-width:460px !important;
+    width:100% !important;
+    margin:0 !important;
+  }
+
+  /* FIX SUPERPOSICIÓN CON COUNTDOWN */
+  #manifiesto .manifesto-primal{ padding-top:140px !important; }
+  #loquehacemos .hero-primal{ padding-top:110px !important; }
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+.hero-logo{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+.hero-logo img{
+  width:170px;
+  max-width:60vw;
+  margin-bottom:24px;
+  display:block;
+}
+
+.hero-logo2{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+.hero-logo2 img{
+  width:100px;
+  max-width:30vw;
+  margin-bottom:24px;
+  display:block;
+}
+
+#s-home .hero-inner,
+#s-home .hero-inner *{
+  color:var(--primal-crudo) !important;
+}
+#s-home .hero-inner .accent{
+  color:var(--primal-naranja) !important;
+  font-weight:500;
+}
+
+.hero-lead{
+  font-size:1.55rem !important;
+  font-weight:300;
+  line-height:1.4;
+  margin-bottom:16px;
+}
+.hero-lead .accent{
+  color:var(--primal-naranja) !important;
+  font-weight:500;
+}
+
+.hero-tags{
+  font-size:0.80rem !important;
+  letter-spacing:0.20em;
+  text-transform:uppercase;
+  margin-top:6px;
+  margin-bottom:28px;
+}
+
+/* BOTÓN */
+.btn-whatsapp-primal{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.5rem;
+  padding:0.9rem 1.8rem;
+  border-radius:999px;
+  border:none;
+  background-color:var(--primal-naranja);
+  color:var(--primal-negro) !important;
+  text-decoration:none;
+  font-size:0.85rem;
+  font-weight:500 !important;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  box-shadow:0 10px 24px rgba(0,0,0,0.55);
+  transition:0.2s;
+  cursor:pointer;
+}
+.btn-whatsapp-primal:hover{
+  background-color:var(--primal-oliva);
+  color:var(--primal-crudo) !important;
+  transform:translateY(-1px);
+  box-shadow:0 14px 30px rgba(0,0,0,0.65);
+}
+
+/* =========================================================
+   COUNTDOWN (tipografía)
+========================================================= */
+.clock .digit .days,
+.clock .digit .txt,
+.clock .digit .txt1,
+.clock .elem-bottom span{
+  font-family:"Neue Montreal","Open Sans",sans-serif !important;
+  font-synthesis:none;
+}
+.clock .digit .txt,
+.clock .digit .txt1{
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+}
+	   #s-when .clock.clock-countdown .digit .txt{
+  display: inline-block;
+  transform: translateX(30px);
+}
+@media (min-width:769px){
+  #s-when .clock.clock-countdown .digit .txt1{
+    display:inline-block !important;
+    transform:translateX(18px) !important;
+  }
+}
+
+/* =========================================================
+   MANIFIESTO
+========================================================= */
+.manifesto-logo img{
+  width:80px;
+  max-width:60vw;
+  margin-bottom:28px;
+}
+.manifesto-inner p{
+  font-size:1.1rem;
+  line-height:1.6;
+  margin-bottom:0.7rem;
+}
+.manifesto-inner p:last-child{ margin-bottom:0; }
+
+#manifiesto .hero-lead{
+  font-family:"Neue Montreal","Open Sans",sans-serif !important;
+  font-size:1.55rem !important;
+  font-weight:300 !important;
+  line-height:1.4 !important;
+  color:var(--primal-crudo) !important;
+}
+#manifiesto .hero-lead .accent{
+  color:var(--primal-naranja) !important;
+  font-weight:500 !important;
+}
+#manifiesto,
+#manifiesto *{
+  -webkit-font-smoothing:antialiased !important;
+  -moz-osx-font-smoothing:grayscale !important;
+  text-rendering:geometricPrecision;
+}
+
+/* =========================================================
+   TITULO REUTILIZABLE (FAQ)
+========================================================= */
+.primal-section-title{
+  margin:0 0 6px !important;
+  font-family:"Neue Montreal","Open Sans",sans-serif !important;
+  font-size:1.85rem !important;
+  font-weight:700 !important;
+  line-height:1.08 !important;
+  text-transform:uppercase !important;
+  letter-spacing:0.06em !important;
+  color:#ffffff !important;
+  border:none !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  text-shadow:none !important;
+  padding:0 !important;
+}
+.primal-section-title > span{
+  display:block !important;
+  margin-top:6px !important;
+  font-family:"Neue Montreal","Open Sans",sans-serif !important;
+  font-size:0.80rem !important;
+  font-weight:500 !important;
+  letter-spacing:0.18em !important;
+  text-transform:uppercase !important;
+  color:var(--primal-crudo) !important;
+}
+
+/* =========================================================
+   LO QUE HACEMOS
+========================================================= */
+#loquehacemos .hero-logo2{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  width:100%;
+  margin-bottom:10px;
+  border:none !important;
+  position:relative;
+}
+#loquehacemos .hero-logo2::before,
+#loquehacemos .hero-logo2::after{
+  content:none !important;
+  border:none !important;
+}
+#loquehacemos .hero-logo2 h3{
+  margin:0 !important;
+  padding:0 !important;
+  border:none !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  text-shadow:none !important;
+  text-align:center !important;
+  width:100%;
+  font-family:"Neue Montreal","Open Sans",sans-serif !important;
+  font-size:1.85rem !important;
+  font-weight:700 !important;
+  line-height:1.08 !important;
+  text-transform:uppercase !important;
+  letter-spacing:0.06em !important;
+  color:#ffffff !important;
+}
+#loquehacemos p{
+  font-size:1.00rem;
+  line-height:1.34;
+  color:var(--primal-crudo);
+  margin:0;
+}
+#loquehacemos p .accent{
+  display:block;
+  margin-top:10px;
+  margin-bottom:2px;
+  font-size:1.15rem;
+  font-weight:700;
+  text-transform:uppercase;
+  color:var(--primal-naranja);
+}
+
+/* =========================================================
+   FECHAS / UBICACIÓN / CUPOS
+========================================================= */
+.primal-info-icon{ margin-bottom:14px; }
+.primal-info-icon img{
+  width:52px;
+  height:auto;
+  display:block;
+  margin:0 auto;
+}
+.primal-info-title{
+  font-size:1.15rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  margin:0 0 4px;
+}
+.primal-info-subtitle{
+  font-size:1rem;
+  font-weight:300;
+  line-height:1.4;
+  margin:0;
+  letter-spacing:0.05em;
+}
+.primal-info-subtitle.cupos{ line-height:1.5; }
+.primal-info-item{ margin-bottom:44px; }
+.primal-info-section .btn-whatsapp-primal{ margin-top:20px; }
+
+#fechas-ubicacion-cupos .primal-info-title,
+#fechas-ubicacion-cupos .primal-info-subtitle{
+  color:var(--primal-crudo) !important;
+}
+
+/* =========================================================
+   FACILITADORES
+========================================================= */
+.primal-speakers-list{ margin-top:24px; }
+.primal-speaker{
+  display:flex;
+  gap:22px;
+  align-items:flex-start;
+}
+.primal-speaker + .primal-speaker{ margin-top:32px; }
+.primal-speaker-media{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.primal-speaker-photo{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  border:3px solid var(--primal-naranja);
+  overflow:hidden;
+}
+.primal-speaker-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.primal-speaker-divider{
+  border:none;
+  border-top:1px solid rgba(240,230,210,0.55);
+  margin:22px 0 26px;
+}
+
+/* nombres + bio alineados a la izquierda */
+#about-us .primal-speakers-wrapper,
+#about-us .primal-speaker-info{
+  text-align:left !important;
+}
+#about-us .primal-speaker-info h3{
+  margin:0 0 2px !important;
+  font-size:1.15rem !important;
+  font-weight:700 !important;
+  text-transform:uppercase !important;
+  letter-spacing:0.06em !important;
+  color:var(--primal-naranja) !important;
+  text-align:left !important;
+}
+#about-us .primal-speaker-info p{
+  margin:0 !important;
+  font-size:1.00rem !important;
+  font-weight:300 !important;
+  line-height:1.34 !important;
+  color:var(--primal-crudo) !important;
+  text-align:left !important;
+}
+
+/* =========================================================
+   FAQ coherente con "LO QUE HACEMOS"
+========================================================= */
+#faqs .primal-faq-inner h2.primal-section-title{
+  margin:0 0 6px !important;
+}
+#faqs .primal-faq-question{
+  margin:12px 0 4px !important;
+  font-size:1.15rem !important;
+  font-weight:700 !important;
+  line-height:1.08 !important;
+  text-transform:uppercase !important;
+  letter-spacing:0.06em !important;
+  color:var(--primal-naranja) !important;
+}
+#faqs .primal-faq-answer{
+  margin:0 0 10px !important;
+  font-size:1.00rem !important;
+  font-weight:300 !important;
+  line-height:1.34 !important;
+  color:var(--primal-crudo) !important;
+}
+
+/* =========================================================
+   CIERRE
+========================================================= */
+.primal-closing-logo img{
+  width:180px;
+  max-width:60vw;
+  display:block;
+  margin:0 auto 24px;
+}
+.primal-closing-title{
+  font-size:1.1rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  margin:0 0 18px;
+}
+.primal-closing-text{
+  font-size:0.98rem;
+  font-weight:400;
+  line-height:1.6;
+  margin:0 0 16px;
+}
+.primal-closing-highlight{
+  font-size:1rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  margin:10px 0 16px;
+  color:var(--primal-naranja) !important;
+}
+.primal-closing-inner .btn-whatsapp-primal{ margin-top:14px; }
+
+/* =========================================================
+   FONDO – MOSTRAR MÁS CIELO
+========================================================= */
+#s-cover .cover-bg{
+  background-position:center 20% !important;
+}
+
+/* =========================================================
+   MOBILE (una sola vez, sin anidar)
+========================================================= */
+@media (max-width:768px){
+
+  /* logo/footer tamaños mobile */
+  .primal-fixed-logo{
+    top:16px;
+    left:16px;
+  }
+  .primal-fixed-logo img{
+    width:140px;
+  }
+  .primal-fixed-footer{
+    bottom:14px;
+  }
+  .primal-fixed-footer .primal-fixed-footer-inner{
+    padding:0 18px;
+  }
+  .primal-fixed-footer .primal-fixed-footer-left,
+  .primal-fixed-footer .primal-fixed-footer-right{
+    font-size:0.78rem;
+    letter-spacing:0.18em;
+  }
+
+  /* layout general mobile */
+  #s-home .hero-primal,
+  #manifiesto .manifesto-primal,
+  #loquehacemos .hero-primal,
+  #fechas-ubicacion-cupos .primal-info-section,
+  #about-us .primal-speakers-section,
+  #faqs .primal-faq-section,
+  #cierre .primal-closing-section{
+    width:100% !important;
+    max-width:none !important;
+    min-height:100vh !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    padding:0 32px !important;
+    box-sizing:border-box !important;
+    text-align:center !important;
+  }
+
+  #manifiesto .manifesto-primal,
+  #loquehacemos .hero-primal{
+    padding-top:150px !important;
+    padding-bottom:40px !important;
+    box-sizing:border-box !important;
+  }
+
+  #s-home .hero-inner,
+  #manifiesto .manifesto-inner,
+  #loquehacemos .hero-inner,
+  #fechas-ubicacion-cupos .primal-info-inner,
+  #about-us .primal-speakers-wrapper,
+  #faqs .primal-faq-inner,
+  #cierre .primal-closing-inner{
+    width:100% !important;
+    max-width:540px !important;
+    margin:0 auto !important;
+    text-align:center !important;
+  }
+
+  #s-home .hero-logo,
+  #manifiesto .hero-logo2,
+  #loquehacemos .hero-logo2{
+    justify-content:center !important;
+  }
+
+  #s-when .clock .digit .txt1,
+  #s-when .clock .digit .txt{
+    font-size:0.75rem;
+  }
+
+  /* Mobile: títulos */
+  #loquehacemos .hero-logo2 h3,
+  .primal-section-title{
+    font-size:1.6rem !important;
+    margin-bottom:6px !important;
+  }
+
+  #loquehacemos p{
+    font-size:0.98rem !important;
+    line-height:1.30 !important;
+  }
+  #loquehacemos p .accent{
+    font-size:1.08rem !important;
+    margin-top:10px !important;
+  }
+
+  #faqs .primal-faq-question{ font-size:1.08rem !important; }
+  #faqs .primal-faq-answer{
+    font-size:0.98rem !important;
+    line-height:1.30 !important;
+  }
+
+  /* FULLPAGE NAV – MOBILE a la izquierda centrados */
+  #fp-nav{
+    left:12px !important;
+    right:auto !important;
+    top:60% !important;
+    transform:translateY(-50%) !important;
+    opacity:0.85;
+  }
+  #fp-nav ul li{ margin:8px 0 !important; }
+  #fp-nav ul li a span{
+    width:6px;
+    height:6px;
+    background:var(--primal-crudo);
+    opacity:0.6;
+  }
+  #fp-nav ul li a.active span{
+    background:var(--primal-crudo);
+    opacity:1;
+  }
+
+  /* =======================================================
+     MOSTRAR/OCULTAR LOGO + FOOTER POR SECCIÓN (MOBILE)
+     - HERO: NO logo / NO footer
+     - MANIFIESTO: NO logo / SÍ footer
+     - DEMÁS: SÍ logo / SÍ footer
+     - CIERRE: NO logo / NO footer
+     Compatible con:
+     - anchors: fp-viewing-s-home, fp-viewing-manifiesto, fp-viewing-cierre
+     - numérico: fp-viewing-0, fp-viewing-1, fp-viewing-6
+  ======================================================= */
+  .primal-fixed-logo{ display:inline-flex !important; }
+  .primal-fixed-footer{ display:block !important; }
+
+  /* HERO */
+  .fp-viewing-s-home .primal-fixed-logo,
+  .fp-viewing-s-home .primal-fixed-footer,
+  .fp-viewing-0 .primal-fixed-logo,
+  .fp-viewing-0 .primal-fixed-footer{
+    display:none !important;
+  }
+
+  /* MANIFIESTO */
+  .fp-viewing-manifiesto .primal-fixed-logo,
+  .fp-viewing-1 .primal-fixed-logo{
+    display:none !important;
+  }
+  .fp-viewing-manifiesto .primal-fixed-footer,
+  .fp-viewing-1 .primal-fixed-footer{
+    display:block !important;
+  }
+
+  /* CIERRE */
+  .fp-viewing-cierre .primal-fixed-logo,
+  .fp-viewing-cierre .primal-fixed-footer,
+  .fp-viewing-6 .primal-fixed-logo,
+  .fp-viewing-6 .primal-fixed-footer{
+    display:none !important;
+  }
+	/* =========================================================
+   MOBILE: mostrar/ocultar LOGO + FOOTER por sección
+   (usa html y body porque fullPage puede poner clases en cualquiera)
+========================================================= */
+@media (max-width: 768px){
+
+	
+
+  /* =========================
+     3) LO QUE HACEMOS
+     + aire con countdown (sin empujar todo)
+     ========================= */
+  #loquehacemos .hero-logo2 h3{
+    transform: translateY(28px); /* 20–40px */
+  }
+  /* compenso para que entre todo */
+  #loquehacemos p{
+    margin-top: 10px !important;
+    line-height: 1.26 !important;
+  }
+
+  /* =========================
+     4) FECHAS / UBICACIÓN / CUPOS
+     - que empiece "menos" abajo (subir contenido)
+     - menos separación entre items y botón
+     ========================= */
+  #fechas-ubicacion-cupos .primal-info-inner{
+    transform: translateY(-28px); /* -18 a -40 */
+  }
+  #fechas-ubicacion-cupos .primal-info-item{
+    margin-bottom: 22px !important; /* antes 44px */
+  }
+  #fechas-ubicacion-cupos .primal-info-section .btn-whatsapp-primal{
+    margin-top: 12px !important; /* antes 20px */
+  }
+
+  /* =========================
+     5) FACILITADORES
+     + que arranque más abajo del countdown (como las otras)
+     ========================= */
+  #about-us .primal-speakers-wrapper{
+    transform: translateY(24px); /* 16–36px */
+  }
+
+  /* =========================
+     6) FAQS
+     + aire con countdown
+     ========================= */
+  #faqs .primal-faq-inner{
+    transform: translateY(24px); /* 16–36px */
+  }
+
+  /* =========================
+     7) CIERRE
+     - logo más chico
+     - menos espacio entre renglones para que entre todo
+     ========================= */
+  #cierre .primal-closing-logo img{
+    width: 140px !important; /* antes 180 */
+    max-width: 52vw !important;
+    margin-bottom: 16px !important;
+  }
+  #cierre .primal-closing-text{
+    line-height: 1.28 !important; /* antes 1.6 */
+    margin-bottom: 10px !important; /* antes 16 */
+  }
+  #cierre .primal-closing-title{
+    margin-bottom: 12px !important; /* antes 18 */
+  }
+  #cierre .primal-closing-highlight{
+    margin: 8px 0 10px !important; /* antes 10/16 */
+  }
+
+
+
+  /* 1) NO empujes el layout: bajá el logo con transform */
+  #s-home .hero-logo{
+    margin-top: 0 !important;
+  }
+  #s-home .hero-logo img{
+    transform: translateY(36px); /* probá 24–48px */
+  }
+
+  /* 2) Recuperá altura útil (los <br> de relleno te matan el “logo→botón”) */
+  #s-home .hero-lead > br:first-child{
+    display: none;
+  }
+  #s-home .hero-tags > br{
+    display: none; /* saca los <br><br> “vacíos” */
+  }
+
+  /* 3) Ajuste fino de espaciados para que entre todo */
+  #s-home .hero-lead{
+    margin-top: 8px !important;
+    margin-bottom: 10px !important;
+  }
+  #s-home .hero-tags{
+    margin-top: 6px !important;
+    margin-bottom: 18px !important;
+  }
+  /* MANIFIESTO: separar isotipo del countdown sin mover el resto */
+  #manifiesto .manifesto-logo img{
+    transform: translateY(28px); /* probá 20–40px */
+  }
+  /* defaults: en mobile, por defecto se ven */
+  .primal-fixed-logo{ display: inline-flex !important; }
+  .primal-fixed-footer{ display: block !important; }
+
+  /* =========================
+     HERO (sección 0): NO logo, NO footer
+     ========================= */
+  html.fp-viewing-s-home .primal-fixed-logo,
+  html.fp-viewing-s-home .primal-fixed-footer,
+  body.fp-viewing-s-home .primal-fixed-logo,
+  body.fp-viewing-s-home .primal-fixed-footer,
+  html.fp-viewing-0 .primal-fixed-logo,
+  html.fp-viewing-0 .primal-fixed-footer,
+  body.fp-viewing-0 .primal-fixed-logo,
+  body.fp-viewing-0 .primal-fixed-footer{
+    display: none !important;
+  }
+
+  /* =========================
+     MANIFIESTO (sección 1): NO logo, SÍ footer
+     ========================= */
+  html.fp-viewing-manifiesto .primal-fixed-logo,
+  body.fp-viewing-manifiesto .primal-fixed-logo,
+  html.fp-viewing-1 .primal-fixed-logo,
+  body.fp-viewing-1 .primal-fixed-logo{
+    display: none !important;
+  }
+  html.fp-viewing-manifiesto .primal-fixed-footer,
+  body.fp-viewing-manifiesto .primal-fixed-footer,
+  html.fp-viewing-1 .primal-fixed-footer,
+  body.fp-viewing-1 .primal-fixed-footer{
+    display: block !important;
+  }
+
+  /* =========================
+     CIERRE (última): NO logo, NO footer
+     OJO: si tu “cierre” NO es la 6, agregá abajo el número correcto.
+     ========================= */
+  html.fp-viewing-cierre .primal-fixed-logo,
+  html.fp-viewing-cierre .primal-fixed-footer,
+  body.fp-viewing-cierre .primal-fixed-logo,
+  body.fp-viewing-cierre .primal-fixed-footer,
+  html.fp-viewing-6 .primal-fixed-logo,
+  html.fp-viewing-6 .primal-fixed-footer,
+  body.fp-viewing-6 .primal-fixed-logo,
+  body.fp-viewing-6 .primal-fixed-footer{
+    display: none !important;
+  }
+
+}
+</style>
+
+
+    <script src="./js/vendor/modernizr-2.7.1.min.js"></script>
+  </head>
+
+  <body id="menu" class="alt-bg">
+
+    <!-- LOGO FIJO ARRIBA IZQUIERDA (TODA LA WEB) -->
+    <a class="primal-fixed-logo" href="#s-home" aria-label="Ir al inicio">
+      <img src="img/PRIMAL_Horizontal_Negativo.png" alt="PRIMAL">
+    </a>
+
+    <!-- FOOTER FIJO (TODA LA WEB) -->
+    <div class="primal-fixed-footer" aria-hidden="true">
+      <div class="primal-fixed-footer-inner">
+        <div class="primal-fixed-footer-left">CUERPO<br>MENTE</div>
+        <div class="primal-fixed-footer-right">ENERGÍA<br>PRESENCIA</div>
+      </div>
+    </div>
+
+    <div class="page-loader" id="page-loader">
+      <div><i class="ion ion-loading-d"></i><p>loading</p></div>
+    </div>
+
+    <!-- Fondo -->
+    <div class="page-cover" id="s-cover">
+      <div class="cover-bg pos-abs full-size bg-img" data-image-src="img/bg-primal-montanas.webp"></div>
+    </div>
+
+    <!-- CONTADOR ORIGINAL -->
+    <div class="pane-when" id="s-when">
+      <div class="content">
+        <div class="clock clock-countdown">
+          <div class="site-config"
+               data-date="03/15/2026 00:00:00"
+               data-date-timezone="+0"></div>
+          <div class="elem-center">
+            <div class="digit">
+              <span class="txt1">FALTAN</span>
+              <span class="days">00</span>
+              <span class="txt">DIAS</span>
+            </div>
+          </div>
+          <div class="elem-bottom">
+            <div class="deco"></div>
+            <span class="hours">00</span><span class="thin">H</span>
+            <span class="minutes">00</span><span class="thin">MN</span>
+            <span class="seconds">00</span><span class="thin">S</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="page-main" id="mainpage">
+
+      <!-- HERO PRIMAL -->
+      <div class="section page-home page page-cent" id="s-home">
+        <section class="content hero-primal">
+          <div class="hero-inner">
+            <div class="hero-logo">
+              <img src="img/PRIMAL_Vertical_Negativo.png" alt="PRIMAL">
+            </div>
+
+            <p class="hero-lead"><br>
+              Entrenamiento <br> <span class="accent">físico, mental y energético</span><br>
+              en la Patagonia salvaje.
+            </p>
+
+            <p class="hero-tags"><br><br>
+              CUERPO • MENTE • ENERGÍA • PRESENCIA<br><br><br>
+            </p>
+
+            <a class="btn-whatsapp-primal"
+               href="https://wa.me/5493512012885?text=Hola%2C+quiero+m%C3%A1s+informaci%C3%B3n+sobre+PRIMAL"
+               target="_blank" rel="noopener">
+              <span class="icon ion ion-social-whatsapp"></span>
+              <span>MÁS INFORMACIÓN POR WHATSAPP</span>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <!-- MANIFIESTO -->
+      <div class="section page-home page page-cent" id="manifiesto">
+        <section class="content hero-primal manifesto-primal">
+          <div class="hero-inner manifesto-inner">
+            <div class="hero-logo2 manifesto-logo">
+              <img src="img/PRIMAL_Isotipo_Negativo.svg" alt="PRIMAL">
+            </div>
+
+            <p class="hero-lead">
+              PRIMAL es instintivo,<br> biológico, no domesticado. <br> <span class="accent">No se aprende. Se recuerda.</span><br>
+              El entorno es vida.
+              El silencio absoluto.<br>
+              El cambio, inevitable.<br>
+              El bosque es el templo.<br>
+              El agua, el espejo.<br>
+              El cuerpo, el portal.<br>
+              No se viene a buscar.<br>
+              Se viene a recordar.<br>
+              Lo que sos. <br>
+              Tu verdadera identidad.<br>
+              <span class="accent">Tu Sat Nam.</span>
+            </p>
+
+          </div>
+        </section>
+      </div>
+
+      <!-- LO QUE HACEMOS -->
+      <div class="section page-home page page-cent" id="loquehacemos">
+        <section class="content hero-primal">
+          <div class="hero-inner">
+            <div class="hero-logo2">
+              <h3>LO QUE HACEMOS</h3>
+            </div>
+
+            <p>
+              <span class="accent">Yoga diario</span>
+              Vinyasa para fluir. Kundalini para despertar.<br>
+              <span class="accent">Crioterapia + respiración</span>
+              Río de deshielo. Respirás distinto. Sentís distinto.<br>
+              <span class="accent">Ceremonias con fuego y cacao</span>
+              Activación energética. Conexión profunda.<br>
+              <span class="accent">Caminatas en montaña y bosques</span>
+              Aire puro. Ritmo interno. Escucha expandida.<br>
+              <span class="accent">Silencio y journaling</span>
+              Callar para integrar. Escribir lo que baja.<br>
+              <span class="accent">Ayuno opcional</span>
+              Vaciar para escuchar. Acompañamiento presente.<br>
+              <span class="accent">Alimentación de alta frecuencia</span>
+              Comida viva, suficiente y parte del proceso.<br>
+              <span class="accent">Descanso consciente</span>
+              Regeneración celular y energética.
+            </p>
+
+          </div>
+        </section>
+      </div>
+
+      <!-- FECHAS – UBICACIÓN – CUPOS -->
+      <div class="section page page-cent" id="fechas-ubicacion-cupos">
+        <section class="content primal-info-section">
+          <div class="primal-info-inner">
+            <div class="primal-info-item">
+              <div class="primal-info-icon">
+                <img src="img/Calendario.svg" alt="Fechas">
+              </div>
+              <p class="primal-info-title">11 AL 16 DE MARZO 2026</p>
+              <p class="primal-info-subtitle">(5 NOCHES)</p>
+            </div>
+
+            <div class="primal-info-item">
+              <div class="primal-info-icon">
+                <img src="img/Locación.svg" alt="Ubicación">
+              </div>
+              <p class="primal-info-title">MONTE DEL TIGRE – CHOLILA</p>
+              <p class="primal-info-subtitle">PATAGONIA SALVAJE</p>
+            </div>
+
+            <div class="primal-info-item">
+              <div class="primal-info-icon">
+                <img src="img/Cupo.svg" alt="Cupos">
+              </div>
+              <p class="primal-info-title">SOLO 14 PERSONAS.</p>
+              <p class="primal-info-subtitle cupos">EN UN ENTORNO CUIDADO, PEQUEÑO E ÍNTIMO.</p>
+            </div>
+
+            <a class="btn-whatsapp-primal"
+               href="https://wa.me/5493512012885?text=Hola%2C+quiero+m%C3%A1s+informaci%C3%B3n+sobre+PRIMAL"
+               target="_blank" rel="noopener">
+              <span class="icon ion ion-social-whatsapp"></span>
+              <span>MÁS INFORMACIÓN POR WHATSAPP</span>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <!-- FACILITADORES PRIMAL -->
+      <div class="section page page-cent" id="about-us">
+        <section class="content primal-speakers-section">
+          <div class="primal-speakers-wrapper">
+            <div class="primal-speakers-list">
+
+              <article class="primal-speaker">
+                <div class="primal-speaker-media">
+                  <div class="primal-speaker-photo">
+                    <img src="img/ines.png" alt="Inés Meneghini">
+                  </div>
+                </div>
+
+                <div class="primal-speaker-info">
+                  <h3>INÉS MENEGHINI</h3>
+                  <p>
+                    Profesora de yoga, guía de meditación y creadora de IM Yoga Studio, un espacio
+                    dedicado al bienestar integral y la práctica consciente a través del cuerpo y la
+                    atención plena. Fundadora de los retiros Anima Parinama y otros encuentros
+                    experienciales, acompaña a quienes buscan profundizar su práctica desde el
+                    movimiento, la respiración y la presencia.
+                  </p>
+                </div>
+              </article>
+
+              <hr class="primal-speaker-divider">
+
+              <article class="primal-speaker">
+                <div class="primal-speaker-media">
+                  <div class="primal-speaker-photo">
+                    <img src="img/arturo.png" alt="Arturo Amorós">
+                  </div>
+                </div>
+
+                <div class="primal-speaker-info">
+                  <h3>ARTURO AMORÓS</h3>
+                  <p>
+                    Estratega corporal que trabaja con herramientas del kundalini yoga, crioterapia
+                    y exposición al calor. Explora cómo, a través del cuerpo y las prácticas, se pueden
+                    abrir caminos de presencia, conexión y autenticidad.
+                  </p>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- PREGUNTAS FRECUENTES PRIMAL -->
+      <div class="section page page-cent" id="faqs">
+        <section class="content primal-faq-section">
+          <div class="primal-faq-inner">
+
+            <!-- NUEVA CLASE (sin conflicto) -->
+            <h2 class="primal-section-title">
+              PREGUNTAS FRECUENTES
+              <span>(FAQS)</span>
+            </h2>
+
+            <div class="primal-faq-item">
+              <p class="primal-faq-question">¿HACE FALTA EXPERIENCIA PREVIA EN YOGA?</p>
+              <p class="primal-faq-answer">
+                No. Solo hace falta disposición, entrega y valentía para sumarte
+                a una experiencia de reconexión profunda.
+              </p>
+            </div>
+
+            <div class="primal-faq-item">
+              <p class="primal-faq-question">¿Y SI NO TOLERO EL FRÍO?</p>
+              <p class="primal-faq-answer">
+                Vas a estar acompañado/a en todo momento. El cuerpo sorprende
+                cuando se siente cuidado.
+              </p>
+            </div>
+
+            <div class="primal-faq-item">
+              <p class="primal-faq-question">¿PUEDO PAGAR EN CUOTAS?</p>
+              <p class="primal-faq-answer">
+                Sí. Tenemos un plan de 3 pagos. Consultanos.
+              </p>
+            </div>
+
+            <div class="primal-faq-item">
+              <p class="primal-faq-question">¿QUÉ NECESITO LLEVAR?</p>
+              <p class="primal-faq-answer">
+                Te mandamos un checklist simple. No hace falta más de lo esencial.
+              </p>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+      <!-- CIERRE -->
+      <div class="section page page-cent" id="cierre">
+        <section class="content primal-closing-section">
+          <div class="primal-closing-inner">
+
+            <div class="primal-closing-logo">
+              <img src="img/PRIMAL_Vertical_Negativo.png" alt="PRIMAL">
+            </div>
+
+            <p class="primal-closing-title">EL CUERPO LO INTUYE ANTES QUE LA MENTE.</p>
+
+            <p class="primal-closing-text">
+              SOLO 14 PERSONAS, EN UN ENTORNO DISEÑADO<br>
+              PARA QUE CADA CAMINO SEA COMPARTIDO,<br>
+              PROFUNDO Y CUIDADO.
+            </p>
+
+            <p class="primal-closing-highlight">SI ESTO TE RESUENA, ESCRIBINOS.</p>
+
+            <p class="primal-closing-text">
+              TE MANDAMOS LA INFORMACIÓN COMPLETA<br>
+              Y TE CONTAMOS CÓMO APLICAR.
+            </p>
+
+            <a class="btn-whatsapp-primal"
+               href="https://wa.me/5493512012885?text=Hola%2C+quiero+m%C3%A1s+informaci%C3%B3n+sobre+PRIMAL"
+               target="_blank" rel="noopener">
+              <span class="icon ion ion-social-whatsapp"></span>
+              <span>MÁS INFORMACIÓN POR WHATSAPP</span>
+            </a>
+
+          </div>
+        </section>
+      </div>
+
+    </main>
+
+    <footer class="page-footer"></footer>
+
+    <script src="./js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="./js/vendor/all.js"></script>
+    <script src="./js/vendor/jquery.fullPage.min.js"></script>
+    <script src="./js/vendor/vegas/vegas.min.js"></script>
+    <script src="./js/vendor/all.js"></script>
+    <script src="./js/jquery.downCount.js"></script>
+    <script src="./js/form_script.js"></script>
+    <script src="./js/main.js"></script>
+
+  </body>
+</html>
